@@ -33,8 +33,11 @@ services:
       - "3600:3600"
     depends_on: 
       - redis
+    environment:
+      - REDIS_SERVER=redis
     volumes:
-      - ./server:/app
+      - ./server:/home/app
+      - /home/app/node_modules
 ################################
 #   Setup nginx load balancer
 ################################
@@ -44,6 +47,7 @@ services:
       - '80:80' # expose 80 on host and sent to 80 in container
     depends_on: 
       - web
+      - server
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
 volumes:  
