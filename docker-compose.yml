@@ -23,7 +23,7 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
-      - ./dump.rdb:/data/dump.rdb:rw
+      - ${PWD}/dump.rdb:/dump.rdb:rw
 ################################
 #   Setup Nodejs Server container
 ################################
