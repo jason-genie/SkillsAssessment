@@ -1,5 +1,7 @@
 let redis = require('redis')  // Require Redis
-let client = redis.createClient() // Create a new redis instance
+let client = redis.createClient({
+  host: process.env.REDIS_SERVER
+}) // Create a new redis instance
 
 exports.get_all_experiences = (req, res, next) => {
   let return_dataset = []

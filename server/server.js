@@ -3,7 +3,9 @@ let path = require('path')
 let bodyParser = require('body-parser')
 let methodOverride = require('method-override')
 let redis = require('redis')
-let client = redis.createClient()
+let client = redis.createClient({
+  host: process.env.REDIS_SERVER
+})
 
 // define routes
 let routes = require('./Routes/api')
