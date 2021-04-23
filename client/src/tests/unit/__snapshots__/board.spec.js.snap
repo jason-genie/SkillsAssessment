@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board.vue to match snapshot 1`] = `
+<div>
+  <div class="container">
+    <loading-stub isfullpage="true" transition="fade" oncancel="function _default() {}" color="#006633" opacity="0.3" loader="dots"></loading-stub>
+    <div class="row">
+      <cell-stub></cell-stub>
+      <cell-stub></cell-stub>
+      <cell-stub></cell-stub>
+    </div>
+    <div class="row">
+      <cell-stub></cell-stub>
+      <cell-stub></cell-stub>
+      <cell-stub></cell-stub>
+    </div>
+    <div class="row">
+      <cell-stub></cell-stub>
+      <cell-stub></cell-stub>
+      <cell-stub></cell-stub>
+    </div>
+    <div class="hline line1"></div>
+    <div class="hline line2"></div>
+    <div class="vline line3"></div>
+    <div class="vline line4"></div>
+  </div>
+  <choice-stub></choice-stub>
+  <!---->
+</div>
+`;
